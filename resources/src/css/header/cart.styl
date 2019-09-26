@@ -1,0 +1,11 @@
+@import "../mixins/colors.styl"
+
+.cart
+    margin-left: auto
+    
+    &__icon
+        transition .3s
+        icon_size_mask 24px, 24px, "../../images/cart.svg"
+        background-color $color-grey
+        &:hover
+            background-color $color-blue

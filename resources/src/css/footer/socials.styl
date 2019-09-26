@@ -1,0 +1,39 @@
+.socials
+  width 150px
+  
+  &__list
+    margin-top 12px
+    display flex
+    justify-content space-between
+
+  &__item
+    width 42px
+    height 42px
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    border 3px solid $color-light-grey
+    border-radius 50%
+    transition .3s
+
+    &:hover
+      border 2.5px solid $color-light-blue
+      .socials__item-fb
+        background-color $color-blue
+      .socials__item-gp
+        background-color $color-blue
+      .socials__item-tw
+        background-color $color-blue
+    &-fb
+      transition .3s
+      icon_size_mask 8px, 16px, "../../images/fb.svg"
+      background-color $color-grey
+    &-gp
+      transition .3s
+      icon_size_mask 15px, 17px, "../../images/g+.svg"
+      background-color $color-grey
+    &-tw
+      transition .3s
+      icon_size_mask 15.5px, 15px, "../../images/tw.svg"
+      background-color $color-grey

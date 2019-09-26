@@ -9,7 +9,7 @@
     <link href="./css/main.min.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div class="maincontent">
+    <main class="maincontent">
       <div class="header">
         <div class="logo">
           <svg class="logo__img" viewBox="0 0 176 38">
@@ -38,24 +38,37 @@
               <li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Submenu 3</a></li>
             </ul>
           </li>
-        </ul><a class="basket" href="#">
-          <svg class="basket__img" viewBox="0 0 24 24">
-            <use xlink:href="./images/sprite.svg#basket"></use>
-          </svg></a>
+        </ul><a class="cart" href="#">
+          <div class="cart__icon"></div></a>
       </div>
       <div class="wrapper"></div>
       <div class="footer">
-        <div class="about">
-          <p class="about__desk"></p>
-          <h6 class="about__label"></h6>
-        </div>
-        <div class="terms">
-          <ul class="terms__list">
-            <li class="terms__list-item"><a class="terms__list-link" href="#">Privacy Policy</a></li>
-          </ul>
+        <div class="footer__content">
+          <div class="about">
+            <p class="about__desk"> While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space. It is those feelings that drive our love of astronomy  and our desire to learn more and more about it. </p>
+            <h6 class="about__label"> Test TRK © 2017</h6>
+          </div>
+          <div class="terms">
+            <h5 class="footer__title">Terms & Conditions</h5>
+            <ul class="terms__list">
+              <li class="terms__list-item"><a class="terms__list-link" href="#">Privacy Policy</a>
+                <div class="terms__list-item-desc"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts">
+            <h5 class="footer__title">Contact Support</h5><a class="contacts__mail" href="mailto:jermey.kling@yahoo.com">jermey.kling@yahoo.com</a><a class="btn contacts__btn" href="#">Leave feedback</a>
+          </div>
+          <div class="socials">
+            <h5 class="footer__title">Follow</h5>
+            <div class="socials__list"><a class="socials__item" href="#">
+                <div class="socials__item-fb"></div></a><a class="socials__item" href="#">
+                <div class="socials__item-gp"></div></a><a class="socials__item" href="#">
+                <div class="socials__item-tw"></div></a></div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <script src="./js/main.min.js" defer="defer"></script>
   </body>
 </html>

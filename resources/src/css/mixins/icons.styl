@@ -1,0 +1,14 @@
+icon_size_mask(width, height, image_url)
+  display block
+  content ''
+  height height
+  width width
+  background-size width height
+  min-width width
+  min-height height
+  mask-size width height
+  mask-image url(image_url)
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    background-color transparent !important
+    mask-image none !important
+    background-image url(image_url)
