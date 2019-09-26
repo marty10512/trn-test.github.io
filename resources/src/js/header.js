@@ -14,4 +14,8 @@
       }
     });
   }
+
+  $('body').on('click', '.wrapper',function() {
+    $('.header__menu').find('li').removeClass('header__menu-item--active');
+  })
 })();

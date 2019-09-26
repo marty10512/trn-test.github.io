@@ -85,8 +85,9 @@ gulp.task('minify-css mobile', function() {
 
 gulp.task('concat-js', function() {
     return gulp.src([
-        src+'/js/header.js',
         src+'/js/jQuery.js',
+        src+'/js/header.js',
+        src+'/js/footer.js'
         
     ])
         .pipe(concat('main.js'))
