@@ -55,6 +55,8 @@ gulp.task('stylus mobile', function() {
 
 gulp.task('minify-css', function() {
     return gulp.src([
+        src+'/css/plugins/slick-theme.css',
+        src+'/css/plugins/slick.css',
         src+'/css/plugins/main.css'
     ])
         .pipe(autoprefixer({
@@ -86,6 +88,8 @@ gulp.task('minify-css mobile', function() {
 gulp.task('concat-js', function() {
     return gulp.src([
         src+'/js/jQuery.js',
+        src+'/js/slick.js',
+        src+'/js/slider.js',
         src+'/js/header.js',
         src+'/js/footer.js'
         

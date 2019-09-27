@@ -4,9 +4,10 @@ html(lang="en")
         title INDEX
         include mixin/styles
     body
-
+        include overlay/overlay
         main.maincontent
             include header/header
             .wrapper
+                include slider/slider
             include footer/footer
         include mixin/scripts
