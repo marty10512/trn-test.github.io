@@ -14,7 +14,7 @@
 
         .active
                 color $color-dark
-                .header__dropdown
+                .dropdown
                     display flex
 
                 &:hover 
@@ -61,55 +61,3 @@
                 right -5px
                 top 26px
                 transition .3s
-
-    &__dropdown
-        position absolute
-        width 121px
-        height 110px
-        top 60px
-        display none
-        flex-direction column
-        justify-content space-evenly
-        align-items center
-        border-radius 6px
-        box-shadow 0 2px 5px rgba(0,0,0,0.5)
-        line-height 20px
-        color $color-grey
-        background-color #fff
-        z-index 5
-
-        &-item
-            width 78px
-            height 20px
-            display flex
-            justify-content center
-
-            &:hover
-                width 100px
-                color $color-dark
-        
-        &-link
-            font-size 16px
-            &:hover
-                font-size 18px
-
-        &:after
-            position absolute
-            content ""
-            height 0px
-            width 0px
-            display block
-            border 13px solid transparent
-            border-bottom-color rgba(0,0,0,0.03)
-            top -25px
-
-        &:before
-            position absolute
-            content ""
-            height 0px
-            width 0px
-            display block
-            border 11px solid transparent
-            border-bottom-color #fff
-            top -21px
-            z-index 1

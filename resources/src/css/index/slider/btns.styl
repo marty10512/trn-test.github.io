@@ -1,0 +1,52 @@
+.prev-btn
+  cursor pointer
+  position absolute
+  left 130px
+  top 260px
+  width 43px
+  height 85px
+  background-color $color-light-grey
+  border-radius 0 50px 50px 0
+  opacity .4
+  transition .3s
+  z-index 5
+
+  &:after
+    display block
+    content ""
+    icon_size_mask 43px, 85px, "../../images/arrow-prev.svg"
+    background-color $color-dark
+    transition .3s
+
+  &:hover
+    opacity 1
+    &:after
+      background-color $color-blue
+
+
+
+.next-btn
+  cursor pointer
+  position absolute
+  left 1267px
+  top 260px
+  width 43px
+  height 85px
+  background-color $color-light-grey
+  border-radius 50px 0 0 50px
+  opacity .4
+  transition .3s
+  z-index 5
+
+  &:after
+    display block
+    content ""
+    transform rotate(180deg)
+    icon_size_mask 43px, 85px, "../../images/arrow-prev.svg"
+    background-color $color-dark
+    transition .3s
+
+  &:hover
+    opacity 1
+    &:after
+      background-color $color-blue

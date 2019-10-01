@@ -2,10 +2,20 @@
 
 .cart
     margin-left: auto
+    position relative
+
+    &:hover
+        &:after
+            background-color $color-blue
     
-    &__icon
+    &:after
+        display block
+        content ""
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
         transition .3s
         icon_size_mask 24px, 24px, "../../images/cart.svg"
         background-color $color-grey
-        &:hover
-            background-color $color-blue
+        
