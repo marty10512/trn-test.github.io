@@ -2,7 +2,7 @@
 .header
     
     &__menu
-        margin-left 10%
+        margin-left 111px
         display flex
         flex-direction row
         height 100%
@@ -11,6 +11,20 @@
         line-height 66px
         font-size 18px
         font-weight 600
+
+        .active
+                color $color-dark
+                .header__dropdown
+                    display flex
+
+                &:hover 
+                    color unset
+                    border-top-color #fff
+                
+                &:after
+                    display none
+                &:before
+                    display block
 
         &-item
             width 80px
@@ -35,7 +49,7 @@
                 border 5px solid transparent
                 border-top-color $color-grey
                 right -5px
-                top 56%
+                top 30px
                 transition .3s
 
             &:before
@@ -45,23 +59,8 @@
                 border 5px solid transparent
                 border-bottom-color $color-dark
                 right -5px
-                top 49%
+                top 26px
                 transition .3s
-
-            
-            &--active
-                color $color-dark
-                .header__dropdown
-                    display flex
-
-                &:hover 
-                    color unset
-                    border-top-color #fff
-                
-                &:after
-                    display none
-                &:before
-                    display block
 
     &__dropdown
         position absolute

@@ -1,0 +1,99 @@
+.no-scroll
+  height 100vh
+  overflow hidden
+
+.overlay
+  display none //block
+  position fixed
+  background-color $color-light-grey
+  width 100vw
+  height 100vh
+  z-index 99
+
+  &__form
+    position fixed
+    width 580px
+    height 416px
+    top 56px
+    left 50%
+    transform translateX(-50%)
+    background-color #fff
+    border 1px solid #E3E9EF
+    border-radius 8px
+    box-shadow 0 3px 5px 0 rgba(31,45,61,0.15)
+    padding 0 50.5px
+    display flex
+    flex-direction column
+
+    &-label
+      height 80px
+      padding 0 10px
+      margin-top 20px
+
+      &-name
+        font-size 16px
+        color $color-grey
+
+      &-input 
+        margin-top 10px
+        height 50px
+        width 460px
+        border 1px solid #E3E9EF
+        border-radius 6px
+        background-color #fff
+        padding-left 10px
+        font-size 18px
+        font-weight 600
+        color $color-dark
+        transition .3s
+
+        &:focus
+          border-color $color-blue
+
+    &-btn
+      margin-top 40px
+      margin-left 10px
+      height 48px
+      width 458px
+      border-radius 6px
+      background-color $color-blue
+      border 1px solid $color-blue
+      display flex
+      justify-content center
+      cursor pointer
+      transition .3s
+
+      &:hover
+        background-color #ffffff
+        .overlay__form-btn-text
+          color $color-blue
+
+
+      &-text
+        font-size 18px
+        line-height 23px
+        font-weight 700
+        color #fff
+        transition .3s
+      
+
+    &-title
+      height 54px
+      font-size 30px
+      line-height 38px
+      font-weight 700
+      text-align center
+      margin-top 30.5px
+      position relative
+      border-bottom 1px solid $color-dark-white
+
+    &-close
+      position absolute
+      height 24px
+      width 24px
+      right -46px
+      top -28px
+      color #B8C1CC
+
+  
+  

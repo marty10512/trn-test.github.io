@@ -9,10 +9,31 @@
     <link href="./css/main.min.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
+    <div class="overlay">
+      <form class="overlay__form" action="">
+        <h3 class="overlay__form-title">Leave your feedback
+          <div class="overlay__form-close close">
+            <div class="close__item"></div>
+          </div>
+        </h3>
+        <label class="overlay__form-label" for="ovrl-name">
+          <h5 class="overlay__form-label-name">Name</h5>
+          <input class="overlay__form-label-input" type="text" placeholder="John" required="required" id="ovrl-name"/>
+        </label>
+        <label class="overlay__form-label" for="ovrl-comment">
+          <h5 class="overlay__form-label-name">Comment</h5>
+          <input class="overlay__form-label-input" type="text" placeholder="u r so cute!!:3" required="required" id="ovrl-comment"/>
+        </label>
+        <label class="overlay__form-btn" for="ovrl-submit">
+          <input class="visuallyHidden" id="ovrl-submit" type="submit"/>
+          <button class="overlay__form-btn-text" href="#">Save</button>
+        </label>
+      </form>
+    </div>
     <main class="maincontent">
       <div class="header">
-        <div class="logo">
-          <svg class="logo__img" viewBox="0 0 176 38">
+        <div class="header__logo">
+          <svg class="logo-img" viewBox="0 0 176 38">
             <use xlink:href="./images/sprite.svg#logo"></use>
           </svg>
         </div>
@@ -42,18 +63,19 @@
           <div class="cart__icon"></div></a>
       </div>
       <div class="wrapper">
-        <div class="prev-btn">
-          <div class="prev-btn-item"></div>
-        </div>
-        <div class="next-btn"></div>
-        <div class="slider">
-          <div><img class="slider__item" src="images/slide1.png"/></div>
-          <div><img class="slider__item" src="images/slide2.png"/></div>
-          <div><img class="slider__item" src="images/slide3.png"/></div>
-          <div><img class="slider__item" src="images/slide4.png"/></div>
-          <div><img class="slider__item" src="images/slide5.png"/></div>
-          <div><img class="slider__item" src="images/slide6.png"/></div>
-        </div>
+        <section class="index-slider">
+          <div class="prev-btn"></div>
+          <div class="prev-btn-bg"></div>
+          <div class="next-btn"></div>
+          <div class="slider">
+            <div><img class="slider__item" src="images/slide1.png"/></div>
+            <div><img class="slider__item" src="images/slide2.png"/></div>
+            <div><img class="slider__item" src="images/slide3.png"/></div>
+            <div><img class="slider__item" src="images/slide4.png"/></div>
+            <div><img class="slider__item" src="images/slide5.png"/></div>
+            <div><img class="slider__item" src="images/slide6.png"/></div>
+          </div>
+        </section>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem tempora architecto cumque minus mollitia provident pariatur iusto! Et amet aperiam assumenda aliquid eaque ipsa distinctio accusamus ipsam fugit quod.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem tempora architecto cumque minus mollitia provident pariatur iusto! Et amet aperiam assumenda aliquid eaque ipsa distinctio accusamus ipsam fugit quod.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quidem tempora architecto cumque minus mollitia provident pariatur iusto! Et amet aperiam assumenda aliquid eaque ipsa distinctio accusamus ipsam fugit quod.</p>

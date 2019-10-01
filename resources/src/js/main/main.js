@@ -13625,16 +13625,16 @@ return jQuery;
     list[i].addEventListener('click', function (e) {
       for (v = 0; v < list.length; v++) {
         if (list[v] !== this ) {
-          list[v].classList.remove('header__menu-item--active');
+          list[v].classList.remove('active');
         } else {
-          this.classList.toggle('header__menu-item--active');
+          this.classList.toggle('active');
         }
       }
     });
   }
 
   $('body').on('click', '.wrapper',function() {
-    $('.header__menu').find('li').removeClass('header__menu-item--active');
+    $('.header__menu').find('li').removeClass('active');
   })
 })();
 (function(){
@@ -13644,17 +13644,40 @@ return jQuery;
 
   for (i = 0; i < list.length; i++) {
     list[i].addEventListener('click', function (e) {
+      e.preventDefault();
       for (v = 0; v < list.length; v++) {
         if (list[v] !== this ) {
-          list[v].classList.remove('terms__list-item--active');
+          list[v].classList.remove('active');
         } else {
-          this.classList.add('terms__list-item--active');
+          this.classList.add('active');
         } 
       }
     });
   }
   
   $('.terms__list-item').on('click','.emerge__close', function(){
-    $('.terms__list').find('li').removeClass('terms__list-item--active');
+    $('.terms__list').find('li').removeClass('active');
   })
+})();
+(function(){
+  // вызов окна с оверлеем
+$(document).on('click', '.contacts__btn', function(e) {
+  e.preventDefault();
+  $('body').addClass('no-scroll');
+  $('body').find('.overlay').css('display','block');
+})
+
+// закрытие окна с оверлеем по крестику
+$(document).on('click', '.overlay__form-close', function(e){
+  e.preventDefault();
+  $('body').removeClass('no-scroll');
+  $('body').find('.overlay').css('display','none');
+})
+
+// закрытие окна с оверлеем по save
+$(document).on('click', '.overlay__form-btn', function(e){
+  e.preventDefault();
+  $('body').removeClass('no-scroll');
+  $('body').find('.overlay').css('display','none');
+})
 })();

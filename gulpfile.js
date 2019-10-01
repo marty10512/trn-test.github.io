@@ -91,7 +91,8 @@ gulp.task('concat-js', function() {
         src+'/js/slick.js',
         src+'/js/slider.js',
         src+'/js/header.js',
-        src+'/js/footer.js'
+        src+'/js/footer.js',
+        src+'/js/overlay.js'
         
     ])
         .pipe(concat('main.js'))

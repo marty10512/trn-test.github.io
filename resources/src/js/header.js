@@ -7,15 +7,15 @@
     list[i].addEventListener('click', function (e) {
       for (v = 0; v < list.length; v++) {
         if (list[v] !== this ) {
-          list[v].classList.remove('header__menu-item--active');
+          list[v].classList.remove('active');
         } else {
-          this.classList.toggle('header__menu-item--active');
+          this.classList.toggle('active');
         }
       }
     });
   }
 
   $('body').on('click', '.wrapper',function() {
-    $('.header__menu').find('li').removeClass('header__menu-item--active');
+    $('.header__menu').find('li').removeClass('active');
   })
 })();
