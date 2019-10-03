@@ -1,5 +1,5 @@
 (function(){
-  let list = document.querySelectorAll('.header__menu-item');
+  let list = document.querySelectorAll('.header-menu__item');
   let i;
   let v;
 
@@ -16,6 +16,6 @@
   }
 
   $('body').on('click', '.wrapper',function() {
-    $('.header__menu').find('li').removeClass('active');
+    $('.header-menu').find('li').removeClass('active');
   })
 })();

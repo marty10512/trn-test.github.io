@@ -13616,8 +13616,16 @@ return jQuery;
     nextArrow: $('.next-btn')
   });
 })();
+
 (function(){
-  let list = document.querySelectorAll('.header__menu-item');
+  $('.listing__slider').slick({
+    arrows: true,
+    prevArrow: $('.listing__prev-btn'),
+    nextArrow: $('.listing__next-btn')
+  });
+})();
+(function(){
+  let list = document.querySelectorAll('.header-menu__item');
   let i;
   let v;
 
@@ -13634,7 +13642,7 @@ return jQuery;
   }
 
   $('body').on('click', '.wrapper',function() {
-    $('.header__menu').find('li').removeClass('active');
+    $('.header-menu').find('li').removeClass('active');
   })
 })();
 (function(){

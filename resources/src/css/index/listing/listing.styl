@@ -1,0 +1,113 @@
+.listing
+  margin-top 102px
+  height 859px
+  width 1183px
+  position relative
+
+  &__title
+    text-transform uppercase
+    font-size 22px
+    line-height 28px
+    font-weight 700
+    color $color-dark
+
+    &--number
+      font-weight 600
+      color $color-grey
+    
+  &__slider
+    margin-top 20px
+
+    &-item
+      display flex
+      flex-direction row
+      flex-wrap wrap
+      justify-content space-between
+
+  &-video 
+    height 257px
+    width 280px
+
+    &__img
+      position relative
+      cursor pointer
+
+      img 
+        display block
+        object-fit cover
+        height 157px
+        width 280px
+        border-radius 6px
+      
+      &:after
+        position absolute
+        display block
+        content "0:17"
+        text-align center
+        line-height 22px
+        font-size 14px
+        height 20px
+        width 40px 
+        border-radius 2px
+        color #fff
+        background-color $color-dark
+        right 5px
+        bottom 5px
+
+    
+    &__title
+      margin-top 10px
+      font-size 16px
+      line-height 20px
+      font-weight 600
+      color $color-dark
+      cursor pointer
+    
+    &__author
+      font-size 14px
+      color $color-dark
+    
+    &__desc
+      font-size 14px
+      color $color-grey
+  
+  &__prev-btn
+    position absolute
+    cursor pointer
+    height 50px
+    width 25px
+    top -11px
+    right 22px
+
+    &:after
+      display block
+      content ""
+      icon_size_mask 25px, 50px, "../../images/arrow-prev.svg"
+      background-color $color-grey
+      opacity .5
+      transition .3s
+    
+    &:hover
+      &:after
+        opacity 1
+
+  &__next-btn
+    position absolute
+    cursor pointer
+    height 50px
+    width 25px
+    top -12px
+    right 0px
+
+    &:after
+      display block
+      content ""
+      transform rotate(180deg)
+      icon_size_mask 25px, 50px, "../../images/arrow-prev.svg"
+      background-color $color-grey
+      opacity .5
+      transition .3s
+    
+    &:hover
+      &:after
+        opacity 1
