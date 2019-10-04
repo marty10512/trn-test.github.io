@@ -2,10 +2,12 @@
   margin-top 40px
   height 402px
   width 1181px
-
+  
+  
   &__title
+    margin-bottom 50px
     @extend .listing__title
-
+  
   &__list
     margin-top 29px
     display flex
@@ -14,6 +16,7 @@
       color $color-blue
 
     &-item
+      width 100px
       font-size 18px
       line-height 23px
       font-weight 700
@@ -22,18 +25,19 @@
       margin-left 40px
       cursor pointer
       transition .3s
+      
+
       &:first-child
         margin-left 0
-      &:hover 
+      
+      &:hover
         color $color-blue
-  
   &__slider
-    margin-top 60px
 
     &-items
-      display flex
-      flex-direction row
-      justify-content space-between
+    display flex
+    flex-direction row
+    justify-content space-between
   
   &-item
     width 180px
@@ -52,20 +56,12 @@
       @extend .listing-video__title
     &__author
       @extend .listing-video__author
+  
 
-.slick
-  &-dots
-    top -40px
-    height 23px
-    width 135px
-
+  .slick-dots
+    top -24px
+    
     li
       height 23px
-      width 45px
-  &-active
-    .tabs__list-item
-      color $color-blue
-      cursor default
-
-
+      width 100px
   

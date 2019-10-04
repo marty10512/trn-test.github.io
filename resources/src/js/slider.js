@@ -21,7 +21,7 @@
     dots: true,
     customPaging : function(slider, i) {
       let thumb = $(slider.$slides[i]).data('thumb');
-    return '<div class="tabs__list-item">tab</div>';
+    return '<div class="tabs__list-item">tab'+[i+1]+'</div>';
   }
   });
 })();
