@@ -5,3 +5,10 @@ mixin listing(img_src, title, author, desc)
         .listing-video__title=  title
         .listing-video__author= author
         .listing-video__desc= desc
+
+mixin tabs(img_src, title, author)
+    .tabs-item
+        .tabs-item__img
+            img(src= img_src)
+        .tabs-item__title= title
+        .tabs-item__author= author
