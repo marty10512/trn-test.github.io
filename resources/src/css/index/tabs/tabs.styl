@@ -28,7 +28,7 @@
         color $color-blue
   
   &__slider
-    margin-top 60px
+    margin-top 80px
 
     &-items
       display flex
@@ -53,19 +53,21 @@
     &__author
       @extend .listing-video__author
 
-.slick
-  &-dots
-    top -40px
-    height 23px
-    width 135px
-
-    li
+  .slick
+    &-dots
+      top -40px
       height 23px
-      width 45px
-  &-active
-    .tabs__list-item
-      color $color-blue
-      cursor default
+      width 135px
 
+      li
+        height 23px
+        width 45px
+    &-active
+      .tabs__list-item
+        color $color-blue
+        cursor default
+
+    &-track
+      height 275px
 
   

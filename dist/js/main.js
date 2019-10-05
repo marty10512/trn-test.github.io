@@ -16159,3 +16159,34 @@ $(document).on('click', '.overlay__form-btn', function(e){
     to: 10
   });
 })();
+(function(){
+  $('.elements-content__switch').on('click', function(e){
+    e.preventDefault();
+    $('.elements-content__switch-btn--left').toggleClass('btn--opposite')
+    $('.elements-content__switch-btn--right').toggleClass('btn--opposite')
+  })
+})();
+(function(){
+  let form = $('.elements-content__choice-form');
+  let list = $('.elements-content__choice-list');
+
+  form.on('click', function(e){
+    e.preventDefault();
+    list.toggleClass('active')
+    
+})
+})();
+
+(function(){
+  let list = $('.elements-content__choice-list');
+
+  $('body').on('click', function(e){
+      e.preventDefault();
+      if (list.hasClass('active')){
+        list.removeClass('active')
+      }
+    })
+    
+  
+
+})();

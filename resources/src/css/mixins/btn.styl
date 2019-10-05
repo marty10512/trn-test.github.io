@@ -4,8 +4,25 @@
     color $color-grey
     font-weight 700
     transition .3s
+    cursor pointer
+    text-align center
     
     &:hover
         border-color $color-blue
         color #ffffff
         background-color $color-blue
+    
+    &--opposite
+        border 1px solid $color-blue
+        border-radius 6px
+        font-weight 700
+        color #ffffff
+        transition .3s
+        background-color $color-blue
+        cursor pointer
+        text-align center
+
+        &:hover
+            border-color $color-grey
+            color $color-grey
+            background-color #fff
