@@ -16160,33 +16160,67 @@ $(document).on('click', '.overlay__form-btn', function(e){
   });
 })();
 (function(){
-  $('.elements-content__switch').on('click', function(e){
+  $('.switch').on('click', function(e){
     e.preventDefault();
-    $('.elements-content__switch-btn--left').toggleClass('btn--opposite')
-    $('.elements-content__switch-btn--right').toggleClass('btn--opposite')
+    $('.switch-btn--left').toggleClass('btn--opposite')
+    $('.switch-btn--right').toggleClass('btn--opposite')
   })
 })();
 (function(){
-  let form = $('.elements-content__choice-form');
-  let list = $('.elements-content__choice-list');
+  let choice = $('.choice');
+  let list = $('.choice__list');
 
-  form.on('click', function(e){
+  choice.on('click', function(e){
     e.preventDefault();
-    list.toggleClass('active')
+    list.toggleClass('active');
+    console.log($('.choice-form'));
     
-})
+  }
+  )
 })();
 
-(function(){
-  let list = $('.elements-content__choice-list');
+/*(function(){
+  let list = $('.choice-list');
 
   $('body').on('click', function(e){
       e.preventDefault();
       if (list.hasClass('active')){
-        list.removeClass('active')
+        console.log('lol')
+        //list.removeClass('active')
       }
     })
     
   
 
+})();*/
+(function(){
+  let btn = $('.selection-btn');
+
+  btn.on('click', function(e){
+    e.preventDefault();
+    btn.toggleClass('on');
+    btn.toggleClass('off');
+  })
+})();
+(function(){
+  $('.form__btns-notify').on('click', function(e){
+    e.preventDefault();
+    $('.form__btns-notify__link').toggleClass('disable')
+  })
+})();
+(function(){
+
+  $('.form').on('keyup',function(e){
+    let review = $('#review').val();
+    let name = $('#name').val();
+    let email = $('#email').val();
+
+    if(review.length != 0 && name.length != 0 && email.length != 0) {
+      $('#submit').removeAttr('disabled');
+      $('.submit__btn-item').removeClass('disabled');
+    } else {
+      $('#submit').attr('disabled', 'disabled');
+      $('.submit__btn-item').addClass('disabled');
+    }
+  })
 })();

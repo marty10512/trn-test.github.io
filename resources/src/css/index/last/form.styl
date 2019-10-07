@@ -1,0 +1,129 @@
+.form
+  width 100%
+  display flex
+  flex-direction column
+
+  &__group
+    margin-top 18px
+    display flex
+    flex-direction row
+    justify-content space-between
+
+  &__review
+
+    &-title
+      font-size 16px
+      color $color-dark
+      position relative
+      width 80px
+      &:after
+        position absolute
+        display block
+        content "*"
+        color red
+        top 0
+        right -8px
+  
+    &-textarea 
+      margin-top 8px
+      height 269px
+      width 780px
+      padding 12px 15px
+      overflow auto
+      font-size 18px
+      line-height 23px
+      color $color-dark
+      resize none
+      border 1px solid $color-light-grey
+      border-radius 6px
+      transition .3s
+
+      &:focus
+        border 1px solid $color-blue
+        border-radius 6px
+        outline none
+
+      &::-webkit-input-placeholder
+        color $color-light-grey
+      &::-moz-placeholder
+        color $color-light-grey
+    
+  &__name
+
+    &-title
+      @extend .form__review-title
+      width 42px
+    
+    &-input
+      @extend .form__review-textarea
+      height 40px
+      width 379px
+
+  &__email
+    @extend .form__name
+
+  &__btns
+    margin-top 30px
+
+    &-notify
+      cursor pointer
+      display flex
+      flex-direction row
+      &:hover
+        .form__btns-notify__link:after
+          background-color $color-grey
+        .form__btns-notify__link:before
+          background-color $color-blue
+
+      .disable
+          &:after
+            opacity 0
+          &:before
+            opacity 1
+
+      &__link
+        position relative
+
+        &:after
+          position absolute
+          content ""
+          display block
+          top 50%
+          transform translateY(-50%)
+          opacity 1
+          transition .3s
+          icon_size_mask 24px 24px "../../images/btns/checked.svg"
+          background-color $color-blue
+          
+        &:before
+          position absolute
+          content ""
+          display block
+          top 50%
+          transform translateY(-50%)
+          opacity 0
+          transition .3s
+          icon_size_mask 24px 24px "../../images/btns/unchecked.svg"
+          background-color $color-grey
+
+      &__title
+        padding-top 4px
+        margin-left 30px
+        font-size 14px
+        line-height 18px
+        color $color-dark
+    
+    &__submit
+      margin-top 40px
+
+      .submit__btn-item
+        height 40px
+        width 175px
+
+      .disabled
+        cursor default
+        opacity .3
+        background-color $color-grey
+        border-color $color-grey
+        &:hover
+          color #fff

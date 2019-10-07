@@ -1,0 +1,20 @@
+form.last__form.form
+    .form__group
+        label.form__review(for="review")
+            h6.form__review-title Your review
+            textarea.form__review-textarea(id="review" required placeholder="Leave your comment")
+    .form__group
+        label.form__name(for="name")
+            h6.form__name-title Name
+            input.form__name-input(type="text" id="name" required placeholder="Your name")
+        label.form__email(for="email")
+            h6.form__email-title Email
+            input.form__email-input(type="text" id="email" required placeholder="Your email address")
+    .form__btns
+        .form__btns-notify
+            a.form__btns-notify__link(href="#")
+            h6.form__btns-notify__title Notify me of new posts by email.
+        .form__btns__submit
+            label.submit__btn(for="submit")
+              input.visuallyHidden(type="submit" disabled)#submit
+              button.submit__btn-item.btn--opposite.disabled(href="#") Submit

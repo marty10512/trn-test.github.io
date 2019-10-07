@@ -96,8 +96,11 @@ gulp.task('concat-js', function() {
         src+'/js/overlay.js',
         src+'/js/ion.rangeSlider.js',
         src+'/js/range-input.js',
-        src+'/js/elements__switch.js',
-        src+'/js/element-content__choice.js'
+        src+'/js/elements/switch.js',
+        src+'/js/elements/choice.js',
+        src+'/js/elements/selection.js',
+        src+'/js/form/notify.js',
+        src+'/js/form/submit.js'
         
     ])
         .pipe(concat('main.js'))

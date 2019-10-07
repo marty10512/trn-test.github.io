@@ -1,0 +1,22 @@
+.switch
+  padding-top 10px
+  display flex
+  flex-direction row
+  width 146px
+  &:hover
+    .btn
+      border-color $color-blue
+      color $color-blue
+      background-color #fff
+    .btn--opposite
+      border-color $color-grey
+      color #fff
+      background-color $color-grey
+  &-btn
+    width 70px
+    height 30px
+    line-height 30px
+    &--left
+      border-radius 6px 0 0 6px
+    &--right
+      border-radius 0 6px 6px 0
