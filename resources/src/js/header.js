@@ -15,7 +15,10 @@
     });
   }
 
-  $('body').on('click', '.wrapper',function() {
-    $('.header-menu').find('li').removeClass('active');
+  $(document).on('click',function(e) {
+    e.preventDefault();
+    if(!$(e.target).hasClass('header-menu__item-link')){
+      $('.header-menu').find('li').removeClass('active');
+    }
   })
 })();

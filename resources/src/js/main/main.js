@@ -13652,8 +13652,11 @@ return jQuery;
     });
   }
 
-  $('body').on('click', '.wrapper',function() {
-    $('.header-menu').find('li').removeClass('active');
+  $(document).on('click',function(e) {
+    e.preventDefault();
+    if(!$(e.target).hasClass('header-menu__item-link')){
+      $('.header-menu').find('li').removeClass('active');
+    }
   })
 })();
 (function(){
@@ -16173,30 +16176,40 @@ $(document).on('click', '.overlay__form-btn', function(e){
   choice.on('click', function(e){
     e.preventDefault();
     list.toggleClass('active');
-    console.log($('.choice-form'));
-    
-  }
-  )
-})();
+  })
 
-/*(function(){
-  let list = $('.choice-list');
+  let i;
+  let v;
+  let form = $('.choice-form');
+  let item = $('.choice__list-item');
 
-  $('body').on('click', function(e){
-      e.preventDefault();
-      if (list.hasClass('active')){
-        console.log('lol')
-        //list.removeClass('active')
+  for (i = 0; i < item.length; i++) {
+    item[i].addEventListener('click', function(e) {
+      for (v = 0; v < item.length; v++) {
+        if (item[v] !== this ) {
+          item[v].classList.remove('active');
+        } else {
+          this.classList.toggle('active');
+          form.text($(this).text());
+          form.addClass('chosen');
+        }
       }
     })
-    
-  
+  }
 
-})();*/
+  $(document).on('click', function(e){
+    e.preventDefault();
+    if(!$(e.target).hasClass('choice-form')){
+      list.removeClass('active');
+    }
+  })
+
+})();
 (function(){
+  let label = $('.selection');
   let btn = $('.selection-btn');
 
-  btn.on('click', function(e){
+  label.on('click', function(e){
     e.preventDefault();
     btn.toggleClass('on');
     btn.toggleClass('off');
@@ -16223,4 +16236,20 @@ $(document).on('click', '.overlay__form-btn', function(e){
       $('.submit__btn-item').addClass('disabled');
     }
   })
+})();
+(function(){
+  jQuery(document).ready(function($) {
+    $('.rating-item .star').hover(function() {
+      $(this).addClass('to_rate');
+      $(this).parent().find('.star:lt(' + $(this).index() + ')').addClass('to_rate');
+      $(this).parent().find('.star:gt(' + $(this).index() + ')').addClass('no_to_rate');
+    }).mouseout(function() {
+      $(this).parent().find('.star').removeClass('to_rate');
+      $(this).parent().find('.star:gt(' + $(this).index() + ')').removeClass('no_to_rate');
+    }).click(function() {
+      $(this).removeClass('to_rate').addClass('rated');
+      $(this).parent().find('.star:lt(' + $(this).index() + ')').removeClass('to_rate').addClass('rated');
+      $(this).parent().find('.star:gt(' + $(this).index() + ')').removeClass('no_to_rate').removeClass('rated');
+    });
+  });
 })();

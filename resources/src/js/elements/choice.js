@@ -5,23 +5,32 @@
   choice.on('click', function(e){
     e.preventDefault();
     list.toggleClass('active');
-    console.log($('.choice-form'));
-    
-  }
-  )
-})();
+  })
 
-/*(function(){
-  let list = $('.choice-list');
+  let i;
+  let v;
+  let form = $('.choice-form');
+  let item = $('.choice__list-item');
 
-  $('body').on('click', function(e){
-      e.preventDefault();
-      if (list.hasClass('active')){
-        console.log('lol')
-        //list.removeClass('active')
+  for (i = 0; i < item.length; i++) {
+    item[i].addEventListener('click', function(e) {
+      for (v = 0; v < item.length; v++) {
+        if (item[v] !== this ) {
+          item[v].classList.remove('active');
+        } else {
+          this.classList.toggle('active');
+          form.text($(this).text());
+          form.addClass('chosen');
+        }
       }
     })
-    
-  
+  }
 
-})();*/
+  $(document).on('click', function(e){
+    e.preventDefault();
+    if(!$(e.target).hasClass('choice-form')){
+      list.removeClass('active');
+    }
+  })
+
+})();
