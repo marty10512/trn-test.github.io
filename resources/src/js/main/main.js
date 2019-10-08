@@ -16169,11 +16169,11 @@ $(document).on('click', '.overlay__form-btn', function(e){
     $('.switch-btn--right').toggleClass('btn--opposite')
   })
 })();
-(function(){
+(function () {
   let choice = $('.choice');
   let list = $('.choice__list');
 
-  choice.on('click', function(e){
+  choice.on('click', function (e) {
     e.preventDefault();
     list.toggleClass('active');
   })
@@ -16184,9 +16184,9 @@ $(document).on('click', '.overlay__form-btn', function(e){
   let item = $('.choice__list-item');
 
   for (i = 0; i < item.length; i++) {
-    item[i].addEventListener('click', function(e) {
+    item[i].addEventListener('click', function (e) {
       for (v = 0; v < item.length; v++) {
-        if (item[v] !== this ) {
+        if (item[v] !== this) {
           item[v].classList.remove('active');
         } else {
           this.classList.toggle('active');
@@ -16197,14 +16197,19 @@ $(document).on('click', '.overlay__form-btn', function(e){
     })
   }
 
-  $(document).on('click', function(e){
+
+
+  $(document).on('click', function (e) {
     e.preventDefault();
-    if(!$(e.target).hasClass('choice-form')){
+    if (!$(e.target).hasClass('choice-form')) {
       list.removeClass('active');
     }
   })
 
 })();
+
+
+
 (function(){
   let label = $('.selection');
   let btn = $('.selection-btn');
