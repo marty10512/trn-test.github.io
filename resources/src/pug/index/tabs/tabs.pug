@@ -1,27 +1,28 @@
 section.tabs 
     h3.tabs__title tabs
-    .tabs__slider
-        div
-            .tabs__slider-items
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-                +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
-        div
-            .tabs__slider-items
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-              +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
-        div
-            .tabs__slider-items
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
-              +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+    ul.tabs__btns
+        li.tabs__btns-item.active TAB1
+        li.tabs__btns-item TAB2
+        li.tabs__btns-item TAB3
+    ul.tabs__slider
+        li.tabs__slider-items.active
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+          +tabs('images/tabs/1.jpg', 'Famaly', 'by Marty McFly')
+        li.tabs__slider-items
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+          +tabs('images/tabs/2.jpg', 'Famaly', 'by Miguel Cortez')
+        li.tabs__slider-items
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')
+          +tabs('images/tabs/3.jpg', 'Famaly', 'by El Sanchez')

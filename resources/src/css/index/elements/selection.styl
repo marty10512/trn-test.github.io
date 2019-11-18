@@ -1,10 +1,8 @@
 .selection
   width 80px
-  height 22px
   display flex
   flex-direction row
   padding-top 12px
-  cursor pointer
 
   &-title 
     font-size 16px
@@ -12,15 +10,53 @@
     padding-top 6px
     color $color-dark
     font-weight 600
-    cursor pointer
 
   &-btn
     margin-left 12px
     content ""
     width 22px
     height 22px
+    background-color rgba(131,146,166,0.5)
+    cursor pointer
+    transition .3s
+    position relative
 
-.off
-  background-color rgba(131,146,166,0.5)
-.on
-  background-color $color-grey
+    &:after
+      position absolute
+      display none
+      content "The Glossary Of Telescopes sg"
+      text-align center
+      width 210px
+      top -60px
+      left 50%
+      transform translateX(-50%)
+      padding 8px 15px
+      background-color #fff
+      border-radius 6px
+      box-shadow 0 2px 4px 0 rgba(59,72,88,0.4)
+      opacity 0
+      transition .3s
+
+    &:before
+      position absolute
+      display none
+      content ""
+      border 8px solid #fff
+      top -30px
+      left 50%
+      transform translateX(-50%) rotate(45deg)
+      box-shadow 3px 3px 4px 0 rgba(59,72,88,0.4)
+      z-index 10
+      opacity 0
+      transition .3s
+
+    &:hover
+      background-color #8392A6
+      &:after
+        display block
+        opacity 1
+        
+      &:before
+        display block
+        opacity 1
+        

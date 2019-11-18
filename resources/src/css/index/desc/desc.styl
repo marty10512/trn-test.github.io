@@ -1,4 +1,5 @@
 .desc
+  margin-bottom 102px
   width 780px
   display flex
   flex-direction column
@@ -9,37 +10,26 @@
     font-size 42px
     font-weight 600
     line-height 52px
+    margin-bottom 20px
 
   &__subtitle
     height 31px
     font-size 24px
     font-weight 600
     line-height 31px
-    margin-top 20px
+    margin-bottom 15px
 
   &__paragraph
     font-size 16px
     line-height 24px
-
-    &--first 
-      margin-top 15px
-    &--second 
-      margin-top 30px
-    &--third
-      @extend .desc__paragraph--second
-    &--fourth
-      @extend .desc__paragraph--second
-    &--fifth
-      margin-top 15px
-    &--sixth
-      margin-top 20px
+    margin-bottom 30px
 
     &-list
       margin-left 55px
       line-height 24px
       
       &-item
-        margin-top 20px
+        padding-top 20px
       
       &--first
         .desc__paragraph-list-item
@@ -62,18 +52,17 @@
       color $color-blue
 
   &__info
-    margin-top 35px
+    padding-top 5px
 
-    &-title
-      @extend .desc__subtitle
-      margin-top 0
+    .desc__subtitle
+      margin-bottom 20px
     
     &-subtitle
-      margin-top 20px
       font-size 18px
       line-height 30px
       font-weight 600
+      margin-bottom 5px
 
     &-paragraph
       @extend .desc__paragraph
-      margin-top 5px
+      margin-bottom 20px

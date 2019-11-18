@@ -1,5 +1,5 @@
 .table
-  margin-top 30px
+  padding-top 10px
   display flex
   flex-direction column
   color $color-dark
@@ -9,6 +9,7 @@
     flex-direction row
     border-bottom 2px solid $color-dark-white
     padding-bottom 4px
+    margin-bottom 20px
     
     &-item
       font-size 18px
@@ -17,23 +18,20 @@
 
   &-item
     &--first
-      width 74px
       margin-left 20px
     &--second
-      width 74px
       margin-left 108px
     &--third
-      width 74px
       margin-left 147px
     &--fourth
-      width 74px
       margin-left 128px
   
   &__content
-    margin-top 20px
+    margin-bottom 20px
     padding-bottom 20px
     display flex
     flex-direction row
     border-bottom 1px solid $color-dark-white
     &:last-child
       border-bottom none
+      margin-bottom none
