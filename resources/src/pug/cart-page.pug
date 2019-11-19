@@ -1,0 +1,15 @@
+html(lang="en")
+    head
+        include mixin/meta
+        title Second page
+        include mixin/styles
+    body
+        include mixin/mixin
+        include overlay/overlay
+        main.maincontent
+            include header/header
+            .wrapper
+                .cart-page
+                  include cart/cart
+            include footer/footer
+        include mixin/scripts

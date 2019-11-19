@@ -1,0 +1,46 @@
+section.shoping-cart
+  .shoping-cart__title
+    h1.shoping-cart__title-item shoping cart
+  ul.shoping-cart__list
+    li.shoping-cart__list-titles
+      ul.list-titles
+        li.list-titles__item Remove
+        li.list-titles__item Image
+        li.list-titles__item.list-titles__item--prod Product(s)
+        li.list-titles__item Price
+        li.list-titles__item Qty.
+        li.list-titles__item Total
+    li.shoping-cart__list-item
+      .list-item__btn.form__btns-notify
+        a.form__btns-notify__link.disable(href="#")
+      img(src="images/listing/1.jpg").list-item__pic
+      .list-item__name Google Analytics
+      .list-item__price $25.00
+      input(type="text" value="1").list-item__quantity
+      .list-item__total $25.00
+  .shoping-cart__btns
+    button.btns__update.btn--opposite Update cart
+    button.btns__continue.btn Continue shopping
+  .shoping-cart__cheque
+    ul.cheque-list
+      li.cheque-list__item
+        .item__title Sub-Total:
+        .item__price $25.00
+      li.cheque-list__item
+        .item__title Shipping:
+        .item__price $25.00
+      li.cheque-list__item
+        .item__title Tax:
+        .item__price $0.00
+    .cheque-total
+      .cheque-total__title Total:
+      .cheque-total__price $25.00
+    .cheque-notice
+      .cheque-notice__btn.form__btns-notify
+        a.form__btns-notify__link.disable(href="#")
+      .cheque-notice__text
+        span I Agree 
+        span
+          a(href="#").cheque-notice__text-link Our Terms of Service
+        span  and Privacy Notice are linked here for your review.
+    button.btn--opposite.cheque-btn checkout
