@@ -43,7 +43,14 @@
       display none
       position absolute
       top 100%
-      right 18%
+      right 0
+      background-color #fff
+      padding 10px
+      box-shadow 0 2px 4px rgba(59,72,88,.4)
+      border-radius 6px
+
+
+
 
       &-item
         @extend .sidebar__navigation-item
@@ -57,9 +64,6 @@
 
     &__item:after
       left 102%
-
-    &__list
-      right 12%
   
   .active
     .sort-type__list
@@ -85,6 +89,7 @@
       margin auto
       margin-right 17px
       cursor pointer
+
 
       &:after
         display block
