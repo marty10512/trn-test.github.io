@@ -101,7 +101,10 @@ gulp.task('concat-js', function() {
         src+'/js/form/notify.js',
         src+'/js/form/submit.js',
         src+'/js/form/rating.js',
-        src+'/js/tabs.js'
+        src+'/js/tabs.js',
+        src+'/js/sort/type.js',
+        src+'/js/sort/display.js',
+        src+'/js/sort/view.js'
         
     ])
         .pipe(concat('main.js'))

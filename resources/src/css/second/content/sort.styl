@@ -3,13 +3,123 @@
   height 60px
   display flex
   flex-direction row
+  margin-bottom 23px
 
   &-type
     display flex
     flex-direction row
+    width 180px
+    position relative
 
     &__title
+      width 50%
       @extend .sidebar__navigation-item
+      cursor default
+      text-align center
+      &:hover
+        color $color-grey
+
+    &__item
+      @extend .sidebar__navigation-item
+      color $color-dark
+      width 50%
+      text-align center 
+      &:after
+        position absolute
+        display block
+        content ""
+        top 50%
+        transform translateY(-50%)
+        left 100%
+        border 6px solid transparent
+        border-top-color $color-dark
+        transition .3s
+      
+      &:hover
+        &:after
+          border-top-color $color-blue
+
+    &__list
+      display none
+      position absolute
+      top 100%
+      right 18%
+
+      &-item
+        @extend .sidebar__navigation-item
+        color $color-dark
+        height 20px
+        line-height 20px
 
   &-display
     @extend .sort-type
+    margin-left 88px
+
+    &__item:after
+      left 102%
+
+    &__list
+      right 12%
+  
+  .active
+    .sort-type__list
+        display block
+    .sort-type__item:after
+      top 40%
+      transform translateY(-50%) rotate(180deg)
+    .sort-display__list
+        display block
+    .sort-display__item:after
+      top 40%
+      transform translateY(-50%) rotate(180deg)
+  
+  &-view
+    margin-left auto
+    display flex
+    flex-direction row
+
+    &__list
+      position relative
+      height 25px
+      width 30px
+      margin auto
+      margin-right 17px
+      cursor pointer
+
+      &:after
+        display block
+        content ""
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        transition .3s
+        icon_size_mask 30px, 25px, "../images/btns/list.svg"
+        background-color $color-grey
+      
+      &:hover:after
+        background-color $color-blue
+
+    &__tile
+      position relative
+      height 25px
+      width 30px
+      margin auto
+      cursor pointer
+
+      &:after
+        display block
+        content ""
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        transition .3s
+        icon_size_mask 30px, 25px, "../images/btns/tile.svg"
+        background-color $color-grey
+
+      &:hover:after
+        background-color $color-blue
+    
+    .active:after
+      background-color $color-blue

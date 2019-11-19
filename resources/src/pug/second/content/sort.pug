@@ -1,16 +1,18 @@
-.content__sort.sort
+section.content__sort.sort
     .sort-type
-        .sort-type__title sort by
-        .sort-type__list
-            .list-item position
-            .list-item rating
-            .list-item name
+        .sort-type__title sort by:
+        .sort-type__item position
+        ul.sort-type__list
+            li.sort-type__list-item position
+            li.sort-type__list-item rating
+            li.sort-type__list-item name
     .sort-display
-        .sort-display__title display
-        .sort-type__list
-            .list-item 3 per page
-            .list-item 6 per page
-            .list-item 9 per page
+        .sort-display__title display:
+        .sort-display__item 6 per page
+        ul.sort-display__list
+            li.sort-display__list-item 3 per page
+            li.sort-display__list-item 6 per page
+            li.sort-display__list-item 9 per page
     .sort-view
         .sort-view__list
-        .sort-view__tile
+        .sort-view__tile.active
