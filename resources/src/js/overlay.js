@@ -14,7 +14,7 @@ $(document).on('click', '.overlay__form-close', function(e){
 })
 
 // закрытие окна с оверлеем по save
-$(document).on('click', '.overlay__form-btn', function(e){
+$(document).on('click', '.form-btn', function(e){
   e.preventDefault();
   $('body').removeClass('no-scroll');
   $('body').find('.overlay').css('display','none');

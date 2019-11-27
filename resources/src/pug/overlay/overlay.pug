@@ -1,14 +1,14 @@
 .overlay
     form.overlay__form(action="")
-        h3.overlay__form-title Leave your feedback
+        h3.form-title Leave your feedback
             .overlay__form-close.close
                 .close__item
-        label(for="ovrl-name").overlay__form-label
-            h5.overlay__form-label-name Name
-            input.overlay__form-label-input(type="text" placeholder="John" required)#ovrl-name
-        label(for="ovrl-comment").overlay__form-label
-            h5.overlay__form-label-name Comment
-            input.overlay__form-label-input(type="text"  placeholder="u r so cute!!:3" required)#ovrl-comment
-        label.overlay__form-btn(for="ovrl-submit")
+        label(for="ovrl-name").form-label
+            h5.form-label__name Name
+            input.form-label__input(type="text" placeholder="John" required)#ovrl-name
+        label(for="ovrl-comment").form-label
+            h5.form-label__name Comment
+            input.form-label__input(type="text"  placeholder="u r so cute!!:3" required)#ovrl-comment
+        label.form-btn(for="ovrl-submit")
             input#ovrl-submit.visuallyHidden(type="submit")
-            button.overlay__form-btn-text(href="#") Save
+            button.form-btn__text(href="#") Save

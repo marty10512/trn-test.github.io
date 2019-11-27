@@ -13686,7 +13686,7 @@ $(document).on('click', '.overlay__form-close', function(e){
 })
 
 // закрытие окна с оверлеем по save
-$(document).on('click', '.overlay__form-btn', function(e){
+$(document).on('click', '.form-btn', function(e){
   e.preventDefault();
   $('body').removeClass('no-scroll');
   $('body').find('.overlay').css('display','none');
@@ -16270,7 +16270,7 @@ $(document).on('click', '.overlay__form-btn', function(e){
 
   let i;
   let v;
-  let item = $('.sort-type__list-item');
+  let item = $('.type-list-item');
 
   for (i=0;i<item.length; i++) {
     item[i].addEventListener('click', function() {
@@ -16300,7 +16300,7 @@ $(document).on('click', '.overlay__form-btn', function(e){
 
   let i;
   let v;
-  let item = $('.sort-display__list-item');
+  let item = $('.sort-list-item');
 
   for (i=0;i<item.length; i++) {
     item[i].addEventListener('click', function() {

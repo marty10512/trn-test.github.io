@@ -2,7 +2,7 @@
   display flex
   flex-direction column
 
-  &-item
+  &__item
     display flex
     flex-direction row
     height 310px
@@ -10,17 +10,17 @@
     border-bottom 2px solid $color-light-grey
     margin-bottom 26px
 
-    &__pic
+    .item-pic
       width 480px
       border-radius 6px
     
-    &__desc
+    .item-desc
       display flex
       flex-direction column
       margin-left 20px
       width 100%
 
-      .desc-header
+      &__header
         background-color $color-white
         width 100%
         height 60px
@@ -28,7 +28,7 @@
         flex-direction row
         margin-bottom 12px
 
-        &__title
+        .header-title
           line-height 60px
           font-size 22px
           font-weight bold
@@ -36,12 +36,12 @@
           margin-left 18px
           color $color-dark
 
-        &__rating
+        .header-rating
           margin auto 15px auto auto
           display flex
           flex-direction row
 
-          .rating__star
+          &__star
             height 18px
             width 18px
             margin-right 4px
@@ -60,32 +60,33 @@
             &--unmarked:after
               background-color $color-grey
       
-      .desc-text
+      &__text
         color $color-dark
         font-size 20px
         line-height 34px
         margin-bottom 72px
       
-      .desc-footer
+      &__footer
         display flex
         flex-direction row
         height 50px
 
-        &__price
+        .footer-price
           color $color-red
           font-size 24px
           font-weight 600
           margin auto 0
 
-        &__btn
+        .footer-btn
+          @extend .btn--opposite
           margin-left 50px
           line-height 50px
           width 280px
   
-  &-desc
+  &__desc
     
 
-    .desc__paragraph
+    .desc-paragraph
       font-size 20px
       line-height 38px
       color $color-dark

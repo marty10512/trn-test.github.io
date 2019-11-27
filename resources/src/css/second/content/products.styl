@@ -1,13 +1,13 @@
 .products
   width 100%
   
-  &-list
+  &__list
     display grid
 
-    &__item
+    .list-item
       display flex
 
-      &-pic
+      &__pic
         display block
         height 189px
         width 281px
@@ -15,96 +15,97 @@
         object-fit cover
         margin-bottom 10px
 
-      &-desc
+      &__desc
         display flex
         flex-direction column
       
-      &-title
-        line-height 28px
-        color $color-dark
-        font-size 22px
-        font-weight 600
-        margin-bottom 5px
-        transition .3s
-        &:hover
-          color $color-blue
+        .desc-title
+          line-height 28px
+          color $color-dark
+          font-size 22px
+          font-weight 600
+          margin-bottom 5px
+          transition .3s
+          &:hover
+            color $color-blue
 
-      &-rating 
-        display none
-        margin-bottom 15px
+        .desc-rating 
+          display none
+          margin-bottom 15px
 
-        .item-rating__star
-          position relative
-          height 18px
-          width 18px
-          margin-right 4px
-          &:after
-            display block
-            position absolute
-            content ""
-            top 50%
-            left 50%
-            transform translate(-50%, -50%)
-            icon_size_mask 18px, 18px, '../images/star.svg'
-            background-color $color-yellow
-          &--unmarked:after
-            background-color $color-grey
-      
-      &-text
-        display none
-        color $color-dark
-        line-height 24px
-        font-size 18px
-        margin-bottom 5px
+          &__star
+            position relative
+            height 18px
+            width 18px
+            margin-right 4px
+            &:after
+              display block
+              position absolute
+              content ""
+              top 50%
+              left 50%
+              transform translate(-50%, -50%)
+              icon_size_mask 18px, 18px, '../images/star.svg'
+              background-color $color-yellow
+            &--unmarked:after
+              background-color $color-grey
+
+        .desc-text
+          display none
+          color $color-dark
+          line-height 24px
+          font-size 18px
+          margin-bottom 5px
 
 
-      &-price
-        line-height 23px
-        font-size 18px
-        font-weight 600
-        color $color-red
-        margin-bottom 18px
+        .desc-price
+          line-height 23px
+          font-size 18px
+          font-weight 600
+          color $color-red
+          margin-bottom 18px
 
-      &-btn
-        height 50px
-        margin-bottom 20px
-        line-height 50px
-        font-size 18px
-        font-weight 600
-        text-align center
+        .desc-btn
+          @extend .btn--opposite
+          height 50px
+          margin-bottom 20px
+          line-height 50px
+          font-size 18px
+          font-weight 600
+          text-align center
 
   &--tile
-    .products-list
+    .products__list
       grid-template-rows repeat(2, 1fr)
       grid-template-columns repeat(3, 1fr)
       grid-gap 20px
 
-      &__item
+      .list-item
         flex-direction column
 
   &--list
-    .products-list
+    .products__list
       grid-template-rows repeat(6, 1fr)
       grid-template-columns 1fr
       grid-gap 50px
 
-      &__item
+      .list-item
         flex-direction row
 
-        &-desc 
+        &__desc 
           margin-left 20px
-        &-title
+        .desc-title
           margin-bottom 7px
 
-        &-rating 
+        .desc-rating 
           display flex
           flex-direction row
 
-        &-text
+        .desc-text
           display block
         
-        &-price
+        .desc-price
           margin-bottom 19px
 
-        &-btn
+        .desc-btn
           width 280px

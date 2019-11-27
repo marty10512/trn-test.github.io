@@ -9,7 +9,7 @@
 
   let i;
   let v;
-  let item = $('.sort-type__list-item');
+  let item = $('.type-list-item');
 
   for (i=0;i<item.length; i++) {
     item[i].addEventListener('click', function() {
