@@ -1,7 +1,7 @@
 (function(){
   $('.switch').on('click', function(e){
     e.preventDefault();
-    $('.switch-btn--left').toggleClass('btn--opposite')
-    $('.switch-btn--right').toggleClass('btn--opposite')
+    $('.switch__btn--left').toggleClass('btn--opposite')
+    $('.switch__btn--right').toggleClass('btn--opposite')
   })
 })();

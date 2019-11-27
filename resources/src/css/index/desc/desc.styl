@@ -24,15 +24,15 @@
     line-height 24px
     margin-bottom 30px
 
-    &-list
+    .paragraph-list
       margin-left 55px
       line-height 24px
       
-      &-item
+      &__item
         padding-top 20px
       
       &--first
-        .desc__paragraph-list-item
+        .paragraph-list__item
           position relative
           &:before
             display block
@@ -44,25 +44,27 @@
       &--second
         margin-left 38px
         list-style decimal outside
-        .desc__paragraph-list-item
+        .paragraph-list__item
           padding-left 20px
           list-style decimal outside
     
-    &-link
+    .paragraph-link
       color $color-blue
 
   &__info
     padding-top 5px
 
-    .desc__subtitle
+    .desc-subtitle
       margin-bottom 20px
     
-    &-subtitle
+    .desc-info-subtitle
       font-size 18px
       line-height 30px
       font-weight 600
       margin-bottom 5px
 
-    &-paragraph
-      @extend .desc__paragraph
+    .desc-info-paragraph
+      font-size 16px
+      line-height 24px
+      margin-bottom 30px
       margin-bottom 20px

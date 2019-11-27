@@ -1,6 +1,6 @@
 (function(){
-  let tabs = document.querySelectorAll('.tabs__btns-item');
-  let items = document.querySelectorAll('.tabs__slider-items');
+  let tabs = document.querySelectorAll('.btns-item');
+  let items = document.querySelectorAll('.slider-items');
   let i;
   let v;
   

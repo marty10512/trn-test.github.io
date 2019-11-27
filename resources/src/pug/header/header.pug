@@ -2,14 +2,14 @@
     .header__logo
         svg(viewBox="0 0 176 38").logo-img
             use(xlink:href="./images/sprite.svg#logo")
-    ul.header-menu
-        li.header-menu__item
-            a.header-menu__item-link(href="#") Menu 1
+    ul.header__menu
+        li.menu-item
+            a.menu-item__link(href="#") Menu 1
             include dropdown
-        li.header-menu__item
-            a.header-menu__item-link(href="#") Menu 2
+        li.menu-item
+            a.menu-item__link(href="#") Menu 2
             include dropdown
-        li.header-menu__item
-            a.header-menu__item-link(href="#") Menu 3
+        li.menu-item
+            a.menu-item__link(href="#") Menu 3
             include dropdown
-    a(href="./cart-page.html").cart
+    a(href="./cart-page.html").header__cart

@@ -4,7 +4,7 @@
   flex-direction row
   width 146px
   &:hover
-    .btn
+    .switch__btn
       border-color $color-blue
       color $color-blue
       background-color #fff
@@ -12,7 +12,8 @@
       border-color $color-grey
       color #fff
       background-color $color-grey
-  &-btn
+  &__btn
+    @extend .btn
     width 70px
     height 30px
     line-height 30px

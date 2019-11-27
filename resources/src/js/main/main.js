@@ -13609,11 +13609,11 @@ return jQuery;
 }));
 
 (function(){
-  $('.slider').slick({
+  $('.index-slider__slider').slick({
     dots: true,
     arrows: true,
-    prevArrow: $('.prev-btn'),
-    nextArrow: $('.next-btn')
+    prevArrow: $('.index-slider__prev-btn'),
+    nextArrow: $('.index-slider__next-btn')
   });
 })();
 
@@ -13625,7 +13625,7 @@ return jQuery;
   });
 })();
 (function(){
-  let list = document.querySelectorAll('.header-menu__item');
+  let list = document.querySelectorAll('.menu-item');
   let i;
   let v;
 
@@ -13643,13 +13643,13 @@ return jQuery;
 
   $(document).on('click',function(e) {
     e.preventDefault();
-    if(!$(e.target).hasClass('header-menu__item-link')){
-      $('.header-menu').find('li').removeClass('active');
+    if(!$(e.target).hasClass('menu-item__link')){
+      $('.header__menu').find('li').removeClass('active');
     }
   })
 })();
 (function(){
-  let list = $('.terms__list-item');
+  let list = $('.list-item');
   let i;
   let v;
 
@@ -13666,7 +13666,7 @@ return jQuery;
     });
   }
   
-  $('.terms__list-item').on('click','.emerge__close', function(){
+  $('.list-item').on('click','.close', function(){
     $('.terms__list').find('li').removeClass('active');
   })
 })();
@@ -16154,8 +16154,8 @@ $(document).on('click', '.overlay__form-btn', function(e){
 (function(){
   $('.switch').on('click', function(e){
     e.preventDefault();
-    $('.switch-btn--left').toggleClass('btn--opposite')
-    $('.switch-btn--right').toggleClass('btn--opposite')
+    $('.switch__btn--left').toggleClass('btn--opposite')
+    $('.switch__btn--right').toggleClass('btn--opposite')
   })
 })();
 (function () {
@@ -16169,8 +16169,8 @@ $(document).on('click', '.overlay__form-btn', function(e){
 
   let i;
   let v;
-  let form = $('.choice-form');
-  let item = $('.choice__list-item');
+  let form = $('.choice__form');
+  let item = $('.choice-list-item');
 
   for (i = 0; i < item.length; i++) {
     item[i].addEventListener('click', function (e) {
@@ -16190,7 +16190,7 @@ $(document).on('click', '.overlay__form-btn', function(e){
 
   $(document).on('click', function (e) {
     e.preventDefault();
-    if (!$(e.target).hasClass('choice-form')) {
+    if (!$(e.target).hasClass('choice__form')) {
       list.removeClass('active');
     }
   })
@@ -16200,9 +16200,9 @@ $(document).on('click', '.overlay__form-btn', function(e){
 
 
 (function(){
-  $('.form__btns-notify').on('click', function(e){
+  $('.btns-notify').on('click', function(e){
     e.preventDefault();
-    $('.form__btns-notify__link').toggleClass('disable')
+    $('.btns-notify__link').toggleClass('disable')
   })
 })();
 (function(){
@@ -16211,13 +16211,15 @@ $(document).on('click', '.overlay__form-btn', function(e){
     let review = $('#review').val();
     let name = $('#name').val();
     let email = $('#email').val();
+    let submit = $('#submit');
+    let submitItem = $('.submit-btn-item');
 
     if(review.length != 0 && name.length != 0 && email.length != 0) {
-      $('#submit').removeAttr('disabled');
-      $('.submit__btn-item').removeClass('disabled');
+      submit.removeAttr('disabled');
+      submitItem.removeClass('disabled');
     } else {
-      $('#submit').attr('disabled', 'disabled');
-      $('.submit__btn-item').addClass('disabled');
+      submit.attr('disabled', 'disabled');
+      submitItem.addClass('disabled');
     }
   })
 })();
@@ -16238,8 +16240,8 @@ $(document).on('click', '.overlay__form-btn', function(e){
   });
 })();
 (function(){
-  let tabs = document.querySelectorAll('.tabs__btns-item');
-  let items = document.querySelectorAll('.tabs__slider-items');
+  let tabs = document.querySelectorAll('.btns-item');
+  let items = document.querySelectorAll('.slider-items');
   let i;
   let v;
   

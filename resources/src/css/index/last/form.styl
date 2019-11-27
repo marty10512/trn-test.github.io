@@ -9,9 +9,9 @@
     flex-direction row
     justify-content space-between
 
-  &__review
+  &-review
 
-    &-title
+    &__title
       font-size 16px
       color $color-dark
       position relative
@@ -24,7 +24,7 @@
         top 0
         right -8px
   
-    &-textarea 
+    &__textarea 
       margin-top 8px
       height 269px
       width 780px
@@ -48,24 +48,88 @@
       &::-moz-placeholder
         color $color-light-grey
     
-  &__name
+  &-name
 
-    &-title
-      @extend .form__review-title
+    &__title
+      font-size 16px
+      color $color-dark
+      position relative
       width 42px
+      &:after
+        position absolute
+        display block
+        content "*"
+        color red
+        top 0
+        right -8px
     
-    &-input
-      @extend .form__review-textarea
+    &__input
+      margin-top 8px
       height 40px
       width 379px
+      padding 12px 15px
+      overflow auto
+      font-size 18px
+      line-height 23px
+      color $color-dark
+      resize none
+      border 1px solid $color-light-grey
+      border-radius 6px
+      transition .3s
 
-  &__email
-    @extend .form__name
+      &:focus
+        border 1px solid $color-blue
+        border-radius 6px
+        outline none
+
+      &::-webkit-input-placeholder
+        color $color-light-grey
+      &::-moz-placeholder
+        color $color-light-grey
+      
+
+  &-email
+    &__title
+      font-size 16px
+      color $color-dark
+      position relative
+      width 42px
+      &:after
+        position absolute
+        display block
+        content "*"
+        color red
+        top 0
+        right -8px
+    
+    &__input
+      margin-top 8px
+      height 40px
+      width 379px
+      padding 12px 15px
+      overflow auto
+      font-size 18px
+      line-height 23px
+      color $color-dark
+      resize none
+      border 1px solid $color-light-grey
+      border-radius 6px
+      transition .3s
+
+      &:focus
+        border 1px solid $color-blue
+        border-radius 6px
+        outline none
+
+      &::-webkit-input-placeholder
+        color $color-light-grey
+      &::-moz-placeholder
+        color $color-light-grey
 
   &__btns
     margin-top 30px
 
-    &-notify
+    .btns-notify
       cursor pointer
       display flex
       flex-direction row
@@ -113,10 +177,11 @@
         line-height 18px
         color $color-dark
     
-    &__submit
+    .btns-submit
       margin-top 40px
 
-      .submit__btn-item
+      .submit-btn-item
+        @extend .btn--opposite
         height 40px
         width 175px
 
@@ -127,3 +192,7 @@
         border-color $color-grey
         &:hover
           color #fff
+          cursor default
+          opacity .3
+          background-color $color-grey
+          border-color $color-grey

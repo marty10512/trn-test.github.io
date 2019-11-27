@@ -1,15 +1,15 @@
 section.shoping-cart
   .shoping-cart__title
-    h1.shoping-cart__title-item shoping cart
+    h1.title shoping cart
   ul.shoping-cart__list
-    li.shoping-cart__list-titles
-      ul.list-titles
-        li.list-titles__item Remove
-        li.list-titles__item Image
-        li.list-titles__item.list-titles__item--prod Product(s)
-        li.list-titles__item Price
-        li.list-titles__item Qty.
-        li.list-titles__item Total
+    li.list-titles
+      ul.list-titles__list
+        li.list-item Remove
+        li.list-item Image
+        li.list-item.list-item--prod Product(s)
+        li.list-item Price
+        li.list-item Qty.
+        li.list-item Total
     li.shoping-cart__list-item
       .list-item__btn.form__btns-notify
         a.form__btns-notify__link.disable(href="#")
@@ -19,19 +19,19 @@ section.shoping-cart
       input(type="text" value="1").list-item__quantity
       .list-item__total $25.00
   .shoping-cart__btns
-    button.btns__update.btn--opposite Update cart
-    button.btns__continue.btn Continue shopping
+    button.update Update cart
+    button.continue Continue shopping
   .shoping-cart__cheque
     ul.cheque-list
       li.cheque-list__item
-        .item__title Sub-Total:
-        .item__price $25.00
+        .item-title Sub-Total:
+        .item-price $25.00
       li.cheque-list__item
-        .item__title Shipping:
-        .item__price $25.00
+        .item-title Shipping:
+        .item-price $25.00
       li.cheque-list__item
-        .item__title Tax:
-        .item__price $0.00
+        .item-title Tax:
+        .item-price $0.00
     .cheque-total
       .cheque-total__title Total:
       .cheque-total__price $25.00
@@ -43,4 +43,4 @@ section.shoping-cart
         span
           a(href="#").cheque-notice__text-link Our Terms of Service
         span  and Privacy Notice are linked here for your review.
-    button.btn--opposite.cheque-btn checkout
+    button.cheque-btn checkout

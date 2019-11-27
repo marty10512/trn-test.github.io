@@ -9,8 +9,8 @@
 
   let i;
   let v;
-  let form = $('.choice-form');
-  let item = $('.choice__list-item');
+  let form = $('.choice__form');
+  let item = $('.choice-list-item');
 
   for (i = 0; i < item.length; i++) {
     item[i].addEventListener('click', function (e) {
@@ -30,7 +30,7 @@
 
   $(document).on('click', function (e) {
     e.preventDefault();
-    if (!$(e.target).hasClass('choice-form')) {
+    if (!$(e.target).hasClass('choice__form')) {
       list.removeClass('active');
     }
   })

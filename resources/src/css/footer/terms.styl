@@ -2,25 +2,26 @@
   width 180px
 
   &__title 
-    @extend .footer__title 
-  
+    color $color-dark
+    font-size 16px
+    font-weight 700
   &__list
     color $color-grey
     font-size 16px
     font-weight 400
 
     .active
-        .terms__list-item-desc
-          display block
+      .list-item__emerge
+        display block
 
-    &-item
+    .list-item
       margin-top 12px
       position relative
 
-      &-link:hover
+      &__link:hover
         color $color-blue
 
-      &-desc
+      &__emerge
         position absolute
         display none // block
         height 500px
@@ -28,51 +29,49 @@
         top -515px
         left 30%
         transform translateX(-50%)
+        border-radius 6px
+        box-shadow 0 2px 5px rgba(0,0,0,0.5)
+        background-color #fff
 
-.emerge
-  border-radius 6px
-  box-shadow 0 2px 5px rgba(0,0,0,0.5)
-  background-color #fff
+        .emerge-title
+          height 70px
+          line-height 70px
+          font-size 32px
+          font-weight 600
+          color #fff
+          background-color $color-light-blue
+          border-radius 6px 6px 0 0
+          padding-left: 40px;
 
-  &__title
-    height 70px
-    line-height 70px
-    font-size 32px
-    font-weight 600
-    color #fff
-    background-color $color-light-blue
-    border-radius 6px 6px 0 0
-    padding-left: 40px;
+        .emerge-desc 
+          margin auto
+          width 440px
+          height 405px
+          margin-top 15px
+          overflow auto
 
-  &__desc 
-    margin auto
-    width 440px
-    height 405px
-    margin-top 15px
-    overflow auto
+        &:after
+          display block
+          position absolute
+          content ""
+          border 22px solid transparent
+          border-top-color #fff
+          bottom -40px
+          left 50%
+          transform translateX(-50%)
 
-  &:after
-    display block
-    position absolute
-    content ""
-    border 22px solid transparent
-    border-top-color #fff
-    bottom -40px
-    left 50%
-    transform translateX(-50%)
+        &:before
+          display block
+          position absolute
+          content ""
+          border 20px solid transparent
+          border-top-color rgba(0,0,0,0.1)
+          bottom -40px
+          left 50%
+          transform translateX(-50%)
 
-  &:before
-    display block
-    position absolute
-    content ""
-    border 20px solid transparent
-    border-top-color rgba(0,0,0,0.1)
-    bottom -40px
-    left 50%
-    transform translateX(-50%)
-  
-  &__close
-    position absolute
-    right 15px
-    top 10px
+        .close
+          position absolute
+          right 15px
+          top 10px
     

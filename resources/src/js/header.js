@@ -1,5 +1,5 @@
 (function(){
-  let list = document.querySelectorAll('.header-menu__item');
+  let list = document.querySelectorAll('.menu-item');
   let i;
   let v;
 
@@ -17,8 +17,8 @@
 
   $(document).on('click',function(e) {
     e.preventDefault();
-    if(!$(e.target).hasClass('header-menu__item-link')){
-      $('.header-menu').find('li').removeClass('active');
+    if(!$(e.target).hasClass('menu-item__link')){
+      $('.header__menu').find('li').removeClass('active');
     }
   })
 })();

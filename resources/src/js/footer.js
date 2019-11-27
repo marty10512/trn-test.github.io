@@ -1,5 +1,5 @@
 (function(){
-  let list = $('.terms__list-item');
+  let list = $('.list-item');
   let i;
   let v;
 
@@ -16,7 +16,7 @@
     });
   }
   
-  $('.terms__list-item').on('click','.emerge__close', function(){
+  $('.list-item').on('click','.close', function(){
     $('.terms__list').find('li').removeClass('active');
   })
 })();

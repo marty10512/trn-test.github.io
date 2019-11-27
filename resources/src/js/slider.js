@@ -1,9 +1,9 @@
 (function(){
-  $('.slider').slick({
+  $('.index-slider__slider').slick({
     dots: true,
     arrows: true,
-    prevArrow: $('.prev-btn'),
-    nextArrow: $('.next-btn')
+    prevArrow: $('.index-slider__prev-btn'),
+    nextArrow: $('.index-slider__next-btn')
   });
 })();
 
